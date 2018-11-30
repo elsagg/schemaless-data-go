@@ -23,7 +23,7 @@ type Address struct {
 var (
 	db       *sql.DB
 	fixtures *testfixtures.Context
-	conn     = NewConnection(ConnectionOptions{
+	conn     = NewConnection(&ConnectionOptions{
 		Host:       "127.0.0.1",
 		Port:       "3306",
 		Username:   "root",

@@ -104,6 +104,6 @@ func (c *Connection) Disconnect() {
 }
 
 // NewConnection creates a Connection
-func NewConnection(options ConnectionOptions) *Connection {
-	return &Connection{Options: &options}
+func NewConnection(options *ConnectionOptions) *Connection {
+	return &Connection{Options: options}
 }

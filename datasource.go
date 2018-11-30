@@ -13,11 +13,35 @@ type DataSource struct {
 	Connection *Connection
 }
 
+func (d *DataSource) findTable() error {
+	err := d.Connection.Connect()
+
+	if err != nil {
+		return err
+	}
+
+	_, err = d.Connection.DB.Exec(fmt.Sprintf(CreateTableQuery, d.Name))
+
+	if err != nil {
+		return err
+	}
+
+	d.Connection.Disconnect()
+
+	return nil
+}
+
 // FindCell will search for a cell in the DataSource
 func (d *DataSource) FindCell(RowID string, ColumnName string, RefKey int) (*DataCell, error) {
 	var cell DataCell
 
-	err := d.Connection.Connect()
+	err := d.findTable()
+
+	if err != nil {
+		return nil, err
+	}
+
+	err = d.Connection.Connect()
 
 	if err != nil {
 		return nil, err
@@ -40,7 +64,13 @@ func (d *DataSource) FindCell(RowID string, ColumnName string, RefKey int) (*Dat
 func (d *DataSource) FindLatestCell(RowID string, ColumnName string) (*DataCell, error) {
 	var cell DataCell
 
-	err := d.Connection.Connect()
+	err := d.findTable()
+
+	if err != nil {
+		return nil, err
+	}
+
+	err = d.Connection.Connect()
 
 	if err != nil {
 		return nil, err
@@ -62,7 +92,13 @@ func (d *DataSource) FindLatestCell(RowID string, ColumnName string) (*DataCell,
 func (d *DataSource) FindAllLatest(ColumnName string) (*[]DataCell, error) {
 	var cells []DataCell
 
-	err := d.Connection.Connect()
+	err := d.findTable()
+
+	if err != nil {
+		return nil, err
+	}
+
+	err = d.Connection.Connect()
 
 	if err != nil {
 		return nil, err

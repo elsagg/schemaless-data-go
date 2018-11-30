@@ -1,8 +1,11 @@
 # go-schemaless
 
+[![Build Status](https://travis-ci.org/thelenilson/go-schemaless.svg?branch=master)](https://travis-ci.org/thelenilson/go-schemaless)
+
 A basic implementation of schemaless data on mysql inspired by [Uber](https://eng.uber.com/schemaless-part-one/)
 
 ## Installing
+
 ```bash
 go get github.com/thelenilson/go-schemaless
 ```
@@ -62,29 +65,41 @@ func main() {
 ## API's
 
 ### DataSource
+
 CreateCell will create and return a new cell
+
 ```go
 CreateCell(RowID string, ColumnName string, Body interface{}) (*DataCell, error)
 ```
+
 FindCell will return a cell by given arguments
+
 ```go
 FindCell(RowID string, ColumnName string, RefKey int) (*DataCell, error)
 ```
+
 FindLatestCell will search for the latest RefKey of a cell an return it
+
 ```go
 FindLatestCell(RowID string, ColumnName string) (*DataCell, error)
 ```
+
 FindAllLatest will search for the latest RefKey of all cells by a given ColumnName
+
 ```go
 FindAllLatest(ColumnName string) (*[]DataCell, error)
 ```
 
 ### DataCell
+
 MarshalBody will receive any data type and convert to a msgpack binary, then save it to DataCell.Body
+
 ```go
 MarshalBody(v interface{}) (err error)
 ```
+
 UnmarshalBody will convert the msgpack binary in DataCell.Body back to a data type
+
 ```go
 UnmarshalBody(v interface{}) (err error)
 ```

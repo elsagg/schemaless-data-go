@@ -17,6 +17,7 @@ const (
 		body blob,
 		ref_key int(11) DEFAULT NULL,
 		created_at datetime DEFAULT CURRENT_TIMESTAMP,
+		INDEX %s_cell_index (row_id, column_name, ref_key),
 		PRIMARY KEY (added_id)
 	  )`
 )

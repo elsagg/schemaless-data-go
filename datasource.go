@@ -20,7 +20,7 @@ func (d *DataSource) findTable() error {
 		return err
 	}
 
-	_, err = d.Connection.DB.Exec(fmt.Sprintf(CreateTableQuery, d.Name))
+	_, err = d.Connection.DB.Exec(fmt.Sprintf(CreateTableQuery, d.Name, d.Name))
 
 	if err != nil {
 		return err

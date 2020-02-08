@@ -1,0 +1,7 @@
+language: go
+go:
+  - "1.13.7"
+services:
+  - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE users;'

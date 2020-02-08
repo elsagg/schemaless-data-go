@@ -1,0 +1,63 @@
+- added_id: 1
+  row_key: 185133a4-71e4-4595-8f09-3ffe416064fc
+  column_key: BASIC_INFO
+  ref_key: 1
+  body: !!binary |
+    gqpmaXJzdF9uYW1lpEpvaG6pbGFzdF9uYW1lo0RvZQ==
+  created_at: 2018-11-26 13:14:38
+
+- added_id: 2
+  row_key: 79440bc9-f928-42ee-970e-17958d2ceb5b
+  column_key: BASIC_INFO
+  ref_key: 1
+  body: !!binary |
+    gqpmaXJzdF9uYW1lpVplbGRhqWxhc3RfbmFtZaZLbmlnaHQ=
+  created_at: 2018-11-26 18:13:22
+
+- added_id: 3
+  row_key: 79440bc9-f928-42ee-970e-17958d2ceb5b
+  column_key: BASIC_INFO
+  ref_key: 2
+  body: !!binary |
+    gqpmaXJzdF9uYW1lpVplbGRhqWxhc3RfbmFtZahQcmluY2Vzcw==
+  created_at: 2018-11-27 14:38:13
+
+- added_id: 4
+  row_key: f83e0351-a93d-411d-9237-dc841c6d9247
+  column_key: BASIC_INFO
+  ref_key: 1
+  body: !!binary |
+    gqpmaXJzdF9uYW1lpkxpb25lbKlsYXN0X25hbWWmUmljaGll
+  created_at: 2018-11-26 01:06:23
+
+- added_id: 5
+  row_key: f83e0351-a93d-411d-9237-dc841c6d9247
+  column_key: ADDRESS
+  ref_key: 1
+  body: !!binary |
+    gqZzdHJlZXS3U2FudGEgTW9uaWNhIEJvdWxsZXZhcmSjemlw0wAAAAAHhOjU
+  created_at: 2018-11-26 13:18:41
+
+- added_id: 6
+  row_key: 185133a4-71e4-4595-8f09-3ffe416064fc
+  column_key: ADDRESS
+  ref_key: 1
+  body: !!binary |
+    gqZzdHJlZXSxU3Vuc2V0IEJvdWxsZXZhcmSjemlw0wAAAAAGReu1
+  created_at: 2018-11-26 13:14:38
+
+- added_id: 7
+  row_key: 185133a4-71e4-4595-8f09-3ffe416064fc
+  column_key: ADDRESS
+  ref_key: 2
+  body: !!binary |
+    gqZzdHJlZXSwU29tZXdoZXJlIEluaGVsbKN6aXDTAAAAAA9GJRY=
+  created_at: 2018-11-26 13:18:38
+
+- added_id: 8
+  row_key: 79440bc9-f928-42ee-970e-17958d2ceb5b
+  column_key: ADDRESS
+  ref_key: 1
+  body: !!binary |
+    gqZzdHJlZXSyRmlyc3QgS2lzcyBIaWdod2F5o3ppcNMAAAAAAiqxog==
+  created_at: 2018-11-26 19:58:31

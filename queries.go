@@ -15,7 +15,7 @@ const (
 		row_key varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
 		column_key varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
 		body blob,
-		ref_key int(11) DEFAULT NULL,
+		ref_key bigint(20) DEFAULT NULL,
 		created_at datetime DEFAULT CURRENT_TIMESTAMP,
 		INDEX %[1]s_cell_index (row_key, column_key, ref_key),
 		PRIMARY KEY (added_id)

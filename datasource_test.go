@@ -48,7 +48,7 @@ func TestMain(m *testing.M) {
 			row_key varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
 			column_key varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
 			body blob,
-			ref_key int(11) DEFAULT NULL,
+			ref_key bigint(20) DEFAULT NULL,
 			created_at datetime DEFAULT CURRENT_TIMESTAMP,
 			PRIMARY KEY (added_id)
 		  ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

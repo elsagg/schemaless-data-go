@@ -11,7 +11,7 @@ type DataCell struct {
 	AddedID   string    `db:"added_id"`
 	RowKey    string    `db:"row_key"`
 	ColumnKey string    `db:"column_key"`
-	RefKey    int       `db:"ref_key"`
+	RefKey    int64     `db:"ref_key"`
 	Body      []byte    `db:"body"`
 	CreatedAt time.Time `db:"created_at"`
 }

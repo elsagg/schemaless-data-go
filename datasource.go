@@ -32,7 +32,7 @@ func (d *DataSource) findTable() error {
 }
 
 // GetCell will search for a cell in the DataSource
-func (d *DataSource) GetCell(RowKey string, ColumnKey string, RefKey int) (*DataCell, error) {
+func (d *DataSource) GetCell(RowKey string, ColumnKey string, RefKey int64) (*DataCell, error) {
 	var cell DataCell
 
 	err := d.findTable()

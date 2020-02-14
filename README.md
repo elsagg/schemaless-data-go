@@ -66,25 +66,25 @@ func main() {
 
 ### DataSource
 
-CreateCell will create and return a new cell
+PutCell will create and return a new cell
 
 ```go
 PutCell(RowKey string, ColumnKey string, Body interface{}) (*DataCell, error)
 ```
 
-FindCell will return a cell by given arguments
+GetCell will return a cell by given arguments
 
 ```go
 GetCell(RowKey string, ColumnKey string, RefKey int) (*DataCell, error)
 ```
 
-FindLatestCell will search for the latest RefKey of a cell an return it
+GetCellLatest will search for the latest RefKey of a cell an return it
 
 ```go
 GetCellLatest(RowKey string, ColumnKey string) (*DataCell, error)
 ```
 
-FindAllLatest will search for the latest RefKey of all cells by a given ColumnKey
+GetAllLatest will search for the latest RefKey of all cells by a given ColumnKey
 
 ```go
 GetAllLatest(ColumnKey string) (*[]DataCell, error)
